@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Middle Mouse Button Scroll",
+  "version": "0.0.1",
+
+  "description": "Fast scroll with pressed middle mouse button.",
+  "homepage_url": "https://github.com/StoyanDimitrov/middle-mouse-button-scroll",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": [
+        "content_scripts/scroll.js"
+      ]
+    }
+  ]
+}
