@@ -4,8 +4,8 @@ var ratio = {}
 function setRatio()
 {
   ratio = {
-    x: window.document.body.scrollWidth / (window.innerWidth * .8),
-    y: window.document.body.scrollHeight / (window.innerHeight * .8)
+    x: document.body.scrollWidth / (window.innerWidth * .8),
+    y: document.body.scrollHeight / (window.innerHeight * .8)
   }
 }
 
@@ -18,25 +18,25 @@ function scroll(event)
 function setCursor(cursor)
 {
   if (cursor) {
-    return window.document.body.style.cursor = cursor
+    return document.body.style.cursor = cursor
   }
 
-  window.document.body.style.removeProperty('cursor')
+  document.body.style.removeProperty('cursor')
 
-  if (window.document.body.style.length === 0) {
-    window.document.body.removeAttribute('style')
+  if (document.body.style.length === 0) {
+    document.body.removeAttribute('style')
   }
 }
 
 window.addEventListener('resize', setRatio)
 
-window.addEventListener('mousedown', function(event) {
+window.addEventListener('mousedown', (event) => {
 
-  if (event.button !== 1) {
+  if (event.altKey || event.ctrlKey || event.shiftKey) {
     return
   }
 
-  if (event.buttons !== 4) {
+  if (event.button !== 1 && event.buttons !== 4) {
     return
   }
 
@@ -51,7 +51,7 @@ window.addEventListener('mousedown', function(event) {
   window.addEventListener('mousemove', scroll, true)
 })
 
-window.addEventListener('mouseup', function() {
+window.addEventListener('mouseup', () => {
 
   setCursor()
   window.removeEventListener('mousemove', scroll, true)
