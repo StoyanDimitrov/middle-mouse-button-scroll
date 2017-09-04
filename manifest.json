@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Middle Mouse Button Scroll",
-  "version": "0.0.3",
+  "name": "__MSG_title__",
+  "version": "0.2.2",
 
   "description": "__MSG_description__",
   "homepage_url": "https://github.com/StoyanDimitrov/middle-mouse-button-scroll",
@@ -9,9 +9,10 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": [
-        "content_scripts/scroll.js"
-      ]
+      "js": ["content_scripts/scroll.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
     }
   ],
 
