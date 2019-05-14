@@ -1,4 +1,8 @@
 {
+  "title": {
+    "message": "Middle Mouse Button Scroll",
+    "description": "Наименование на добавката"
+  },
   "description": {
     "message": "Разлиствайте бързо с натиснат среден бутон на мишката",
     "description": "Описание на добавката."

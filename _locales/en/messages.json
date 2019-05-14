@@ -1,4 +1,8 @@
 {
+  "title": {
+    "message": "Middle Mouse Button Scroll",
+    "description": "Extension title."
+  },
   "description": {
     "message": "Fast scroll with pressed middle mouse button",
     "description": "Extension descriptnion."
