@@ -1,6 +1,6 @@
 # Middle Mouse Button Scroll
 
-Scroll fast through long documents with middle-click scroll.
+Scroll fast or precise through long documents with pressed middle mouse button.
 
 Holding down `Alt` or `Ctrl` key with pressed middle mouse button enables you to use the browser's implementation of middle-click scroll.
 Holding down `Shift` key with pressed middle mouse button enables you to scroll with high precision.
