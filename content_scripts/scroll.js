@@ -92,6 +92,9 @@
     }
   }
 
+  let doubleClick = false
+  let doubleClick_time = 500
+  
   window.addEventListener('mousedown', (event) => {
     if (event.altKey
       || event.ctrlKey
@@ -111,6 +114,15 @@
       && window.scrollMaxY === 0
     ) {
       return
+    }
+
+    if (doubleClick) {
+        return
+    }
+    else
+    {
+        doubleClick = true
+        setTimeout(function(){ doubleClick = false }, doubleClick_time);
     }
 
     event.preventDefault()
