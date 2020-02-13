@@ -18,6 +18,7 @@
       }
       const ratio = scrollRatio(event)
 
+      // horizontal scroll exists
       if (window.scrollMaxX !== 0) {
         let reachedLeft = false
           , reachedRight = false
@@ -34,12 +35,18 @@
         if ((! reachedLeft && scrollingLeft)
           || (! reachedRight && scrollingRight)
         ) {
-          const documentWidth = Math.max(document.body.scrollWidth, document.body.offsetWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.offsetWidth)
+          const documentWidth = Math.max(document.body.scrollWidth,
+            document.body.offsetWidth,
+            document.documentElement.clientWidth,
+            document.documentElement.scrollWidth,
+            document.documentElement.offsetWidth
+          )
 
-          amount.x = Math.floor(event.movementX * (documentWidth / (window.innerWidth * ratio)))
+          amount.x = event.movementX * Math.max(1, Math.ceil(documentWidth / (window.innerWidth * ratio)))
         }
       }
 
+      // vertical scroll exists
       if (window.scrollMaxY !== 0) {
         let reachedTop = false
           , reachedBottom = false
@@ -56,9 +63,14 @@
         if ((! reachedTop && scrollingUp)
           || (! reachedBottom && scrollingDown)
         ) {
-          const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight)
+          const documentHeight = Math.max(document.body.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.clientHeight,
+            document.documentElement.scrollHeight,
+            document.documentElement.offsetHeight
+          )
 
-          amount.y = Math.floor(event.movementY * (documentHeight / (window.innerHeight * ratio)))
+          amount.y = event.movementY * Math.max(1, Math.ceil(documentHeight / (window.innerHeight * ratio)))
         }
       }
 
