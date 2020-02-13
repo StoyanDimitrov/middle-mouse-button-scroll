@@ -93,7 +93,7 @@
   }
 
   let doubleClick = false
-  let doubleClick_time = 500
+  let doubleClickTime = 500
   
   window.addEventListener('mousedown', (event) => {
     if (event.altKey
@@ -116,14 +116,11 @@
       return
     }
 
-    if (doubleClick) {
+    if (doubleClick === true) {
         return
     }
-    else
-    {
-        doubleClick = true
-        setTimeout(function(){ doubleClick = false }, doubleClick_time);
-    }
+    doubleClick = true
+    setTimeout(() => { doubleClick = false }, doubleClickTime);
 
     event.preventDefault()
 
