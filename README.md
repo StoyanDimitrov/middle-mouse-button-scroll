@@ -2,7 +2,7 @@
 
 Scroll fast or precise through long documents with pressed middle mouse button.
 
-Holding down `Alt` or `Ctrl` key with pressed middle mouse button enables you to use the browser's implementation of middle-click scroll.
+Holding down `Alt` or `Ctrl` key with pressed middle mouse button, or double-clicking middle button, enables you to use the browser's implementation of middle-click scroll.
 Holding down `Shift` key with pressed middle mouse button enables you to scroll with high precision.
 
 **Note**: For the time being the extension scrolls only the whole page and not different parts of it. If you are unable to scroll given page that's the reason why. That feature is planned.
