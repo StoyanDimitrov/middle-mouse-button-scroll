@@ -104,6 +104,9 @@
     }
   }
 
+  let doubleClick = false
+  let doubleClickTime = 500
+  
   window.addEventListener('mousedown', (event) => {
     if (event.altKey
       || event.ctrlKey
@@ -124,6 +127,12 @@
     ) {
       return
     }
+
+    if (doubleClick === true) {
+        return
+    }
+    doubleClick = true
+    setTimeout(() => { doubleClick = false }, doubleClickTime);
 
     event.preventDefault()
 
