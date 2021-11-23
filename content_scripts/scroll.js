@@ -21,7 +21,7 @@
       // horizontal scroll exists
       if (window.scrollMaxX !== 0) {
         let reachedLeft = false
-          , reachedRight = false
+        let reachedRight = false
         const scrollingLeft = event.movementX < 0
         const scrollingRight = event.movementX > 0
 
@@ -49,7 +49,7 @@
       // vertical scroll exists
       if (window.scrollMaxY !== 0) {
         let reachedTop = false
-          , reachedBottom = false
+        let reachedBottom = false
         const scrollingUp = event.movementY < 0
         const scrollingDown = event.movementY > 0
 
